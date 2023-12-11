@@ -1,0 +1,15 @@
+  628  nano pisca.sh
+  629  chmod +x ./pisca.sh
+  630  pisca.sh
+  631  ./pisca.sh
+  632  chmod +x ./pisca.sh
+  633  ./pisca.sh
+  634  nano pisca.sh
+  635* 
+  636  nano pisca.service
+  637  sudo cp pisca.service /lib/systemd/system/
+  638  ls /lib/systemd/system/
+  639  sudo systemct1 start pisca.service
+  640  sudo systemctl start pisca.service
+  641  sudo systemctl stop pisca.service
+  642  sudo systemctl enable pisca.service
