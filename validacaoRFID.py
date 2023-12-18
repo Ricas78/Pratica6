@@ -5,7 +5,7 @@ import RPi.GPIO as GPIO
 # desabilita os avisos
 GPIO.setwarnings(False)
 # configura os pinos GPIOs da rasp que serão utilizados como pinos de saída
-GPIO.setmode(GPIO, BCM)
+GPIO.setmode(GPIO.BCM)
 GPIO.setup(23, GPIO.OUT)
 GPIO.setup(22, GPIO.OUT)
 
