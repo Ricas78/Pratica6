@@ -5,16 +5,17 @@ import os  # Biblioteca para operações do sistema
 import time  # Biblioteca de tempo
 from picamera2 import Picamera2  # Biblioteca da câmera da Raspberry Pi
 import RPi.GPIO as GPIO
+from time import sleep
 
 # desabilita os avisos
 GPIO.setwarnings(False)
 # configura o pino GPIO da rasp que será utilizado como pino de saída
-GPIO.setmode(GPIO, BCM)
+GPIO.setmode(GPIO.BCM)
 GPIO.setup(23, GPIO.OUT)
 
 # Carrega o classificador para detecção facial (informar o caminho do arquivo)
 face_detector = cv2.CascadeClassifier(
-    "/home/sel/haarcascade_frontalface_default.xml")
+    "/home/sel/3122/haarcascade_frontalface_default.xml")
 
 # Inicia uma thread para gerenciar janelas de visualização
 cv2.startWindowThread()
@@ -69,3 +70,4 @@ try:
 
 except KeyboardInterrupt:
     GPIO.cleanup()  # toda vez que interrompermos o programa com crtl C o pino vai ser limpado automaticamente
+
